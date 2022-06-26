@@ -1,0 +1,148 @@
+/*core styles*/
+body{
+  margin:0;
+  font-family: arial, sans-serif;
+  background: #333;
+  color:#fff;
+  font-size:1.1em;
+  line-height:1.5;
+  text-align:centre;
+  }
+
+  img{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+
+  h1,h2,h3{
+    margin:0;
+    padding:1em 0;
+  }
+  p{
+    margin:0;
+    padding:0;
+  }
+
+  .btn{
+    display: inline-block;
+    background:#333;
+    color:#fff;
+    text-decoration:none;
+    padding: 0 2em;
+   /* border: 1px solid #666; */
+    margin: 10em;
+  }
+
+  .btn:hover{
+    background:#eaeaea;
+    color:#333;
+  }
+
+  #showcase{
+    line-height:450px;
+    color: #fff;
+    text-align:centre;
+  }
+
+  #showcase .big-image{
+    position: absolute;
+    background: #333 url(./images/big-image.jpg);
+    background-position: centre;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+    height:100%;
+    z-index: -1;
+    opacity:0.4;
+  }
+
+  #showcase h1{
+    padding-top:100px;
+    padding-bottom: 0;
+  }
+
+  #showcase .content-wrap,#section-a .content-wrap {
+    padding:0 1.5em;
+  }
+
+  #section-a {
+    background: #eaeaea;
+    color: #333;
+    padding-bottom: 2em;
+  }
+
+  #section-b {
+    padding: 2em 1em 1em;
+  }
+
+  #section-b ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+  }
+
+  #section-b li{
+    margin-bottom:1em;
+    background:#fff;
+    color:#333;
+    padding:0.5em;
+  }
+
+  #section-c{
+    background: #fff;
+    color:#333;
+    padding:2em;
+    margin-bottom: 0.2em;
+  }
+
+  /* section D/ BOXES */
+  #section-d .box{
+    padding: 1em;
+    color: #fff;
+  }
+  #section-d .box:first-child{
+    background: #269044;
+  }
+
+  /*footer*/
+   #main-footer{
+    padding: 2em;
+    background:#000;
+    color: #fff;
+    text-align: left;
+   }
+
+   #main-footer a{
+    color: #269044;
+    text-decoration: none;
+   }
+   /*Media Queries */
+   @media 
+   (min-width:700px) {
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+
+    #section-a .content-text{
+      columns: 2;
+      column-gap: 2em;
+    }
+
+    .content-wrap, 
+    #section-b ul {
+      grid-column: 2/4;
+    }
+    .box, #main-footer div{
+      grid-column:span 1;
+    }
+    #section-b ul{
+      display: flex;
+      justify-content: space-around;
+    }
+
+    #section-b li{
+      width: 25%;
+    }
+   }
